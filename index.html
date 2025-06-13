@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoftSkills App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 60px;
+      height: auto;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    input, button, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0 1.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .card {
+      background: #111;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+      margin-bottom: 1.5rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background: #1a1a1a;
+      padding: 0.5rem;
+    }
+    nav button {
+      width: auto;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      margin: 0.2rem;
+    }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="src/assets/ss.png" alt="Logo Softskills" style="width: 150px;" />
+    <h1></h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('login')">Login</button>
+    <button onclick="showSection('mapeamento')">Mapeamento</button>
+    <button onclick="showSection('atividades')">Atividades</button>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('especialistas')">Especialistas</button>
+    <button onclick="showSection('postagens')">Postagens</button>
+    <button onclick="showSection('recomendacoes')">Recomendações</button>
+    <button onclick="showSection('assinatura')">Assinatura</button>
+  </nav>
+
+  <div class="section" id="login">
+    <h2>Login</h2>
+    <div class="card">
+      <input type="email" placeholder="Digite seu e-mail" />
+      <input type="password" placeholder="Digite sua senha" />
+      <button>Entrar</button>
+      <p style="text-align:center; margin-top:1rem;">Não tem uma conta? <a href="#" style="color:#007bff">Cadastre-se</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section active" id="mapeamento">
+      <h2>Mapeamento de Aprendizado</h2>
+      <div class="card">
+        <p>O que você gostaria de melhorar?</p>
+        <select>
+          <option>Comunicação</option>
+          <option>Gestão de tempo</option>
+          <option>Trabalho em equipe</option>
+          <option>Liderança</option>
+        </select>
+        <button>Enviar</button>
+      </div>
+    </div>
+
+    <div class="section" id="atividades">
+      <h2>Atividades</h2>
+      <div class="card"><p><strong>Comunicação Assertiva:</strong> Responda a um cliente insatisfeito de forma empática.</p><button>Responder</button></div>
+      <div class="card"><p><strong>Tomada de Decisão:</strong> Escolha entre duas estratégias para resolver um conflito de equipe.</p><button>Escolher</button></div>
+      <div class="card"><p><strong>Criatividade:</strong> Dê uma solução inovadora para reduzir custos sem perder qualidade.</p><button>Propor</button></div>
+      <div class="card"><p><strong>Escuta Ativa:</strong> Como você responderia a um colega que precisa desabafar?</p><button>Responder</button></div>
+      <div class="card"><p><strong>Gestão de Tempo:</strong> Organize sua agenda para cumprir prazos apertados sem se sobrecarregar.</p><button>Organizar</button></div>
+    </div>
+
+    <div class="section" id="dashboard">
+      <h2>Dashboard de Evolução</h2>
+      <div class="card">
+        <div class="progress-label">
+          <h4>Comunicação</h4>
+          <span>85%</span>
+        </div>
+        <progress value="85" max="100"></progress>
+      </div>
+      <div class="card">
+        <div class="progress-label">
+          <h4>Empatia</h4>
+          <span>70%</span>
+        </div>
+        <progress value="70" max="100"></progress>
+      </div>
+      <div class="card">
+        <div class="progress-label">
+          <h4>Trabalho em Equipe</h4>
+          <span>60%</span>
+        </div>
+        <progress value="60" max="100"></progress>
+      </div>
+      <div class="card">
+        <div class="progress-label">
+          <h4>Resolução de Problemas</h4>
+          <span>90%</span>
+        </div>
+        <progress value="90" max="100"></progress>
+      </div>
+    </div>
+
+    <div class="section" id="especialistas">
+      <h2>Especialistas</h2>
+      <div class="card"><p><strong>Ana Souza - Coach de Liderança</strong></p><button>Seguir</button></div>
+      <div class="card"><p><strong>João Silva - Mentor em Comunicação</strong></p><button>Seguir</button></div>
+    </div>
+
+    <div class="section" id="postagens">
+      <h2>Postagens</h2>
+      <div class="card">
+        <textarea placeholder="Compartilhe sua experiência ou dúvida..."></textarea>
+        <button>Postar</button>
+      </div>
+    </div>
+
+    <div class="section" id="recomendacoes">
+      <h2>Recomendações Personalizadas</h2>
+      <div class="card">
+        <p>Com base nas suas atividades, sugerimos:</p>
+        <ul>
+          <li>Curso rápido de Comunicação Assertiva</li>
+          <li>Desafio: Resolva um conflito de equipe em 5 minutos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="assinatura">
+      <h2>Gerenciar Assinatura</h2>
+      <div class="card">
+        <p>Assine para desbloquear todos os recursos premium.</p>
+        <button>Assinar Agora</button>
+        <button style="background-color: red; margin-top: 1rem;">Cancelar Assinatura</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
