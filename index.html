@@ -74,6 +74,10 @@
       justify-content: space-between;
       align-items: center;
     }
+    a button {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -91,17 +95,8 @@
     <button onclick="showSection('postagens')">Postagens</button>
     <button onclick="showSection('recomendacoes')">Recomendações</button>
     <button onclick="showSection('assinatura')">Assinatura</button>
+    <button onclick="showSection('portfolios')">Portfólios</button>
   </nav>
-
-  <div class="section" id="login">
-    <h2>Login</h2>
-    <div class="card">
-      <input type="email" placeholder="Digite seu e-mail" />
-      <input type="password" placeholder="Digite sua senha" />
-      <button>Entrar</button>
-      <p style="text-align:center; margin-top:1rem;">Não tem uma conta? <a href="#" style="color:#007bff">Cadastre-se</a></p>
-    </div>
-  </div>
 
   <div class="container">
     <div class="section active" id="mapeamento">
@@ -115,6 +110,16 @@
           <option>Liderança</option>
         </select>
         <button>Enviar</button>
+      </div>
+    </div>
+
+    <div class="section" id="login">
+      <h2>Login</h2>
+      <div class="card">
+        <input type="email" placeholder="Digite seu e-mail" />
+        <input type="password" placeholder="Digite sua senha" />
+        <button>Entrar</button>
+        <p style="text-align:center; margin-top:1rem;">Não tem uma conta? <a href="#" style="color:#007bff">Cadastre-se</a></p>
       </div>
     </div>
 
@@ -192,7 +197,22 @@
         <button style="background-color: red; margin-top: 1rem;">Cancelar Assinatura</button>
       </div>
     </div>
+
+    <div class="section" id="portfolios">
+  <h2>Portfólios do Projeto SkillUP</h2>
+  <div class="card">
+    <p>Baixe os documentos do projeto abaixo:</p>
+    <a href="https://drive.google.com/uc?export=download&id=1reEFjbisBjHzr3utIVZ7sqWWbq5W9QqX" download>
+      <button>Baixar Visão SkillUP</button>
+    </a>
+    <a href="https://drive.google.com/uc?export=download&id=11p2GEXgZ6yvLIjeNsXAEjJyoY5CzfM3l" download>
+      <button>Baixar Diagrama Entidade Relacionamento</button>
+    </a>
+    <a href="https://drive.google.com/uc?export=download&id=12YyM8YgSmLvsgD64YqZgjfrz-F-DvcRp" download>
+      <button>Baixar Workflow + DER</button>
+    </a>
   </div>
+</div>
 
   <script>
     function showSection(id) {
